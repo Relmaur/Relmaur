@@ -62,13 +62,15 @@ readonly class WebDeveloper
 
 ### 📐 Featured
 
-#### 1. [The "Rigid Hybrid" Engine](https://github.com/Relmaur/ml-theme--custom-gutenberg)
+#### 1. [TAW Theme — Block Architecture for WordPress](https://github.com/Relmaur/taw)
 
-A custom WordPress framework engineered to bridge **React-based editing** with **PHP-based rendering**.
+A modern WordPress theme framework that replaces page builders and field plugins with a convention-driven block system — zero config, zero bloat.
 
-- **The "Bridge":** I wrote a custom `vite-enqueue.php` handler that connects WordPress directly to a Vite dev server, enabling instant Hot Module Replacement (HMR) for PHP and SCSS changes.
-- **The Strategy:** Uses "Native Dynamic Blocks" (`block.json`) to lock down design constraints (`theme.json`) while allowing content flexibility.
-- **Tech:** PHP 8, React, Vite, PostCSS.
+- **The Architecture:** A dual-block system — **MetaBlocks** own their data (metaboxes + post_meta), **Blocks** handle presentation (props). Auto-discovered by folder convention; drop a class in, it's live.
+- **The Framework:** A bespoke metabox engine built from scratch — config arrays generate complete admin UIs with validation, conditional logic, repeaters, tabs, and a dozen field types. No ACF. No plugins.
+- **The Pipeline:** Vite 7 with critical CSS inlining, async stylesheet loading, scoped per-block assets, and self-hosted font preloading — targeting 90+ Lighthouse scores out of the box.
+- **The DX:** hips with a Symfony Console CLI (php bin/taw make:block Hero --type=meta) and AI-native documentation (AGENTS.md, CLAUDE.md, Copilot instructions) so both humans and AI agents understand the codebase immediately.
+- **Tech:** PHP 8, Tailwind CSS v4, Alpine.js, Vite 7, Symfony Console, WordPress REST API.
 
 #### 2. [Custom PHP framework](https://github.com/Relmaur/ml-cms)
 
